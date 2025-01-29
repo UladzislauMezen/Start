@@ -11,4 +11,9 @@
           class="com.softclub.start.RockMusic">
     </bean>
 
+<bean id = "musicPlayer"
+        class ="com.softclub.start.MusicPlayer">
+    <constructor-arg ref="musicBean"/>
+</bean>
+
 </beans>
