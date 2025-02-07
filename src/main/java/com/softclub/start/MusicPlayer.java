@@ -2,10 +2,25 @@ package com.softclub.start;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
 @Component
 public class MusicPlayer {
+
+    @Value("${musicPlayer.name}")
+    private String name;
+    @Value("$musicPlayer.volume")
+    private int vloume;
+
+    public String getName() {
+        return name;
+    }
+
+    public int getVloume() {
+        return vloume;
+    }
+
     private Music music1;
     private Music music2;
 
